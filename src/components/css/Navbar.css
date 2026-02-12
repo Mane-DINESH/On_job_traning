@@ -1,0 +1,99 @@
+/* ================= NAVBAR CONTAINER ================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 94%;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  justify-self: center;
+
+  /* Slide animation */
+  animation: slideDown 0.6s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Slide animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ================= LOGO ================= */
+
+.navbar h2 {
+  font-size: 22px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar h2:hover {
+  transform: scale(1.05);
+}
+
+/* ================= LINKS CONTAINER ================= */
+
+.navbar div {
+  display: flex;
+  gap: 25px;
+}
+
+/* ================= NAV LINKS ================= */
+
+.navbar a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+/* Hover color */
+.navbar a:hover {
+  color: #ffd369;
+}
+
+/* Underline animation */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #ffd369;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar div {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
