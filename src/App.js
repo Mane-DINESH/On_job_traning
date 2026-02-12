@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+// // import logo from './logo.svg';
+// import './App.css';
+// // import RecordedLecture from './components/js/RecordedLecture';
+// import RecordedLectureHome from './components/js/RecordedLectureHome';
+// function App() {
+//   return (
+//     <div className="App">
+      
+//       <RecordedLectureHome/>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import RecordedLectureHome from "./components/js/RecordedLectureHome";
+import RecordedLecture from "./components/js/RecordedLecture"; // playlist/watch page
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<RecordedLectureHome />} />
+        <Route path="/lecture/:id" element={<RecordedLecture />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
