@@ -1,0 +1,208 @@
+/* General styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9fafb;
+  color: #1e3a8a;
+}
+
+/* Hero Section */
+.user-hero {
+  position: relative;
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 58, 138, 0.6); /* dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #facc15;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+/* Courses Section */
+.user-courses {
+  padding: 80px 20px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.user-courses h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+/* Testimonials */
+.user-testimonials {
+  padding: 80px 20px;
+  background: #1e3a8a;
+  color: #fff;
+  text-align: center;
+}
+
+.user-testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: #fff;
+  color: #1e3a8a;
+  padding: 25px;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.testimonial-card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h4 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Animations */
+.animate-up {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .testimonial-cards { flex-direction: row; justify-content: center; }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-content h1 { font-size: 2rem; }
+  .hero-content p { font-size: 1rem; }
+  .testimonial-cards { flex-direction: column; align-items: center; }
+}
+
+
+/* ===== Offers Section ===== */
+.user-offers {
+  padding: 80px 20px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.user-offers h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #1e3a8a;
+}
+
+.offer-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.offer-card {
+  background: #fff;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.offer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.offer-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.offer-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.offer-card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.offer-card .btn {
+  padding: 10px 20px;
+  background-color: #facc15;
+  color: #1e3a8a;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.offer-card .btn:hover {
+  background-color: #eab308;
+  color: #fff;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 1024px) {
+  .offer-cards {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .offer-card {
+    width: 90%;
+  }
+}
+

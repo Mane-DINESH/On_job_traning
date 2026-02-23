@@ -1,0 +1,131 @@
+/* ===== Admin Layout ===== */
+.admin-dashboard {
+  display: flex;
+  min-height: 100vh;
+  margin-left: 20%;
+}
+
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #1e3a8a;
+  color: #fff;
+  padding: 20px;
+  flex-shrink: 0;
+}
+.sidebar h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar li {
+  margin: 15px 0;
+}
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.sidebar a.active,
+.sidebar a:hover {
+  color: #facc15;
+}
+
+/* Navbar */
+.admin-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #f3f4f6;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+.logout-btn {
+  background: #facc15;
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.logout-btn:hover {
+  background: #eab308;
+}
+
+/* Main Content */
+.dashboard-main {
+  flex: 1;
+  padding: 20px;
+  background: #f9fafb;
+}
+
+/* Dashboard Cards */
+.dashboard-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.dashboard-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}
+.card-icon {
+  font-size: 2rem;
+  color: #1e3a8a;
+}
+.card-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.card-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Tables */
+.table-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.data-table th, .data-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.data-table th {
+  background: #1e3a8a;
+  color: #fff;
+}
+.data-table button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.data-table button:hover {
+  opacity: 0.8;
+}

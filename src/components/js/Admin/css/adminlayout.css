@@ -1,0 +1,35 @@
+.admin-dashboard {
+  display: flex;
+}
+
+/* 🔥 FIXED SIDEBAR */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;     /* important */
+  top: 0;
+  left: 0;
+  background: #1e293b;
+  color: white;
+  overflow-y: auto;
+}
+
+/* MAIN CONTENT AREA */
+.dashboard-main {
+  margin-left: 250px;   /* same as sidebar width */
+  width: calc(100% - 250px);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR FIXED TOP (optional) */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+}
+
+.sidebar { width: 250px; }
+.dashboard-main { margin-left: 250px; }

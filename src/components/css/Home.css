@@ -1,0 +1,342 @@
+/* ===== General Styles ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9fafb;
+  color: #1e3a8a;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 58, 138, 0.6); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #facc15;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  margin-bottom: 25px;
+}
+
+.hero-content .btn {
+  padding: 12px 25px;
+  background-color: #facc15;
+  color: #1e3a8a;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.hero-content .btn:hover {
+  background-color: #eab308;
+  color: #fff;
+}
+
+/* ===== About Section ===== */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+  background: #fff;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.5s;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-text .btn {
+  padding: 10px 20px;
+  background-color: #facc15;
+  color: #1e3a8a;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.about-text .btn:hover {
+  background-color: #eab308;
+  color: #fff;
+}
+
+/* ===== Courses Section ===== */
+.courses-section {
+  padding: 80px 20px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.courses-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+/* ===== Testimonials Section ===== */
+.testimonials {
+  padding: 80px 20px;
+  background: #1e3a8a;
+  color: #fff;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: #fff;
+  color: #1e3a8a;
+  padding: 25px;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.testimonial-card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h4 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* ===== Footer Section ===== */
+.footer {
+  background: #1e3a8a;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.footer-container h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.footer-container p {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  color: #facc15;
+}
+
+.about-container{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  flex-wrap: wrap;
+}
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #facc15;
+}
+
+/* ===== Animations ===== */
+.animate-up {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 1024px) {
+  .about {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+  .about-text p {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+/*   New Code For Default Home page */
+
+/* ===== Offers Section ===== */
+.offers {
+  padding: 80px 20px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.offers h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.offer-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.offer-card {
+  background: #fff;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.offer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.offer-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.offer-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.offer-card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.offer-card .btn {
+  padding: 10px 20px;
+  background-color: #facc15;
+  color: #1e3a8a;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.offer-card .btn:hover {
+  background-color: #eab308;
+  color: #fff;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 1024px) {
+  .offer-cards { justify-content: center; }
+}
+
+@media screen and (max-width: 768px) {
+  .offer-card { width: 90%; }
+}

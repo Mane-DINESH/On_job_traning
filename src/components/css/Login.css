@@ -1,0 +1,105 @@
+/* Center container */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background: linear-gradient(to right, #1e3a8a, #2563eb); */
+  font-family: Arial, sans-serif;
+}
+
+/* Card */
+.auth-card {
+  background-color: #fff;
+  width: 380px;
+  min-height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Move card when switching */
+.auth-card.right-panel-active .login-container {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.auth-card.right-panel-active .register-container {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Form containers */
+.form-container {
+ position: absolute;
+    top: 0;
+    width: 72%;
+    height: 83%;
+    padding: 43px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.6s ease-in-out;
+}
+
+/* Login starts visible, register hidden */
+.login-container {
+  left: 0;
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.register-container {
+  left: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Form elements */
+form h2 {
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+form input {
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #1e3a8a;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 298px;
+}
+
+form button:hover {
+  background-color: #0835ea;
+}
+
+form p {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+form span {
+  color: #1e3a8a;
+  font-weight: bold;
+  cursor: pointer;
+}
